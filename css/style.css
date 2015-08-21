@@ -661,6 +661,10 @@ ul{
 	font-size: 12px;
 	
 }
+.aside-menu.collapse{
+	display: block;
+}
+
 .aside-menu a{
 	color: #BCBAB9;
 	text-decoration: none;
@@ -1226,19 +1230,65 @@ table.plan-rabota tr td:nth-child(3) p {
 }*/
 
 .pricazy-content{
-
     padding: 0px 0px 0px 55px;
 }
-
-
-.news-title{
-	font-family: 'MyriadProRegular';
+.icon.colored,
+.fa.colored {
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+    color: white;
+    font-size: 29px;
+    margin: 0 20px 20px 0;
+    background: #0088cc;
+}
+.dark_light_table{
+	font-size: 16px;
+	color: #000;
+}
+.grey_dark{
+	font-size: 14px;
 }
 
+
+.toggle-menu{
+	position: relative;
+	top: 9px;
+	margin-right: 15px;
+	cursor: pointer;
+	display: none;
+	color: #00829c;
+}
+
+
+
+.contacts-wrapper h6 {
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: 18px;
+ 	  margin-bottom: 25px;
+ 	  margin-top: 0;
+}
+	.contacts-wrapper h6 b{
+		font-weight: normal;
+		font-family: 'MyriadProBold';
+	}
+.news-title{
+	font-family: 'MyriadProLight';
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #3585ac;
+	max-width: 650px;
+}
+.single-post{
+	padding-bottom: 60px;
+}
 .single-post .date{
-	padding: 5px;
+	padding: 2px 5px;
 	font-size: 12px;
 	color: #fff;
+	margin-bottom: 10px;
 	background: #c8c8c7;
 	display: inline-block;
 	-webkit-border-radius: 5px;
@@ -1246,7 +1296,19 @@ table.plan-rabota tr td:nth-child(3) p {
 		     border-radius: 5px;
 }
 
-
+	.single-post p{
+		line-height: 1.3;
+		margin-top: 25px;
+		color: #007c96;
+		font-size: 13px;
+	}
+	.single-post .back-news{
+		font-size: 12px;
+		color: #9e9e9e;
+		text-decoration: underline;
+		display: inline-block;
+		margin-top: 10px;
+	}
 
 
 
@@ -1257,7 +1319,11 @@ table.plan-rabota tr td:nth-child(3) p {
 
 
 @media (max-width: 991px){
-
+	.single-post{
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 30px;
+	}
 	.container{
 		width:100%;
 	}
@@ -1355,6 +1421,16 @@ table.plan-rabota tr td:nth-child(3) p {
 	}
 	.sovet-content{
 		padding-left: 0;
+		margin-top: 20px;
+	}
+	.toggle-menu{
+		display: inline-block;
+	}
+	.aside-menu.collapse{
+		display: none;
+	}
+	.aside-menu.collapse.in{
+		display: block;
 	}
 }
 @media (min-width: 992px){
