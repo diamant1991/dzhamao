@@ -1,0 +1,109 @@
+.cbp-hrmenu {
+	/*width: 638px;*/
+	margin-left: 40px;
+	height: 100%;
+	/*border:1px solid yellow;*/
+	display: inline-block;
+	
+}
+
+/* general ul style */
+.cbp-hrmenu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* first level ul style */
+.cbp-hrmenu > ul,
+.cbp-hrmenu .cbp-hrsub-inner {
+	/*width: 90%;*/
+	max-width: 70em;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+
+/*	#cbp-hrmenu {
+		position: relative;
+		top: 5px;
+		left: -40px;
+		background: #3685AC;
+		border:1px solid red;
+	}*/
+.cbp-hrsub-inner h4{
+	font-size: 16px;
+}
+.cbp-hrmenu > ul > li {
+	display: inline-block;
+	/*width: 25%;*/
+	height: 83px;
+	vertical-align: top;
+}
+
+.cbp-hrmenu > ul > li > a {
+	font-weight: 400;
+	padding: 21px 6px;
+	color: #fff;
+	display: inline-block;
+}
+
+/*.cbp-hrmenu > ul > li > a:hover {
+	color: #47a3da;
+}
+*/
+.cbp-hrmenu > ul > li.cbp-hropen a,
+.cbp-hrmenu > ul > li.cbp-hropen > a:hover {
+	/*color: #fff;*/
+	text-decoration: none;
+	
+}
+
+/* sub-menu */
+.cbp-hrmenu .cbp-hrsub {
+	display: none;
+	position: absolute;
+	background: #3685AC;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+}
+.cbp-hropen{
+	background-color:#3685AC; 
+}
+.cbp-hropen .cbp-hrsub {
+	display: block;
+	padding-bottom: 3em;
+	padding-top: 3em;
+}
+
+.cbp-hrmenu .cbp-hrsub-inner > div {
+	width: 33%;
+	float: left;
+	padding: 0 2em 0;
+}
+
+.cbp-hrmenu .cbp-hrsub-inner:before,
+.cbp-hrmenu .cbp-hrsub-inner:after {
+	content: " ";
+	display: table;
+}
+
+.cbp-hrmenu .cbp-hrsub-inner:after {
+	clear: both;
+}
+
+.cbp-hrmenu .cbp-hrsub-inner > div a {
+	line-height: 2em;
+}
+
+.cbp-hrsub h4 {
+	color: #afdefa;
+/*	padding: 2em 0 0.6em;*/
+	margin-bottom: 15px;
+	/*font-size: 160%;*/
+	font-weight: 300;
+}
+.cbp-hrsub h4>a{
+	color: #AFDEFA;
+}
