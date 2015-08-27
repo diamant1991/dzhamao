@@ -254,6 +254,7 @@ label {
 	width: auto;
 	height: auto;
 	color: #D2D3D3;
+	font-size: 38px;
 } 
 
 .menu-img{
@@ -1356,12 +1357,13 @@ table.plan-rabota tr td:nth-child(3) p {
 		height:48px;
 		padding: 20px 0px;
 	}
+		
 	.menu{
 		display: none;
 	}
 	.icon-hide i{
-	    padding: 22px;
 	    display: inline;
+	    padding: 22px;
 	}
 	.cbp-hropen .cbp-hrsub {
 		padding-top: 0px;
