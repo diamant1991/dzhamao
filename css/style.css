@@ -1313,7 +1313,15 @@ table.plan-rabota tr td:nth-child(3) p {
 
 
 
-
+.scrollTop{
+	width: 32px;
+	height: 32px;
+	position: fixed;
+	z-index: 2;
+	cursor: pointer;
+	right: 8%;
+	bottom: 40px;
+}
 
 
 
