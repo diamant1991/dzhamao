@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -537,13 +538,158 @@
                 </div>
                 </div>
             </div>
+            
+            <div class="question_frame jqmWindow">
+                <span class="jqmClose top-close fa fa-times"></span>
+                <div>
+                    <div class="form popup">
+                        <form>
+                            <div class="form-header">
+                                <i class="fa fa-phone"></i>
+                                <div class="text">
+                                    <div class="title">Обращение в контакт - центр</div>
+                                 </div> 
+                            </div> 
+                            <div class="form-body">
+                               <div class="row">
+                                 <div class="form-group">
+                                    <div class="col-md-12">
+                                       <label for="FIO">ФИО полностью:: <span class="required-star">*</span></label>    <div class="input">
+                                             <input type="text" id="FIO" name="FIO" class="form-control required " value="">
+                                          </div>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="row">
+                                 <div class="form-group">
+                                    <div class="col-md-12">
+                                       <label for="city">Населенный пункт:: <span class="required-star">*</span></label> 
+                                          <div class="input">
+                                             <input type="text" id="city" name="city" class="form-control required " value="">
+                                          </div>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <div class="row">
+                     <div class="form-group">
+                        <div class="col-md-12">
+                           <label for="phone">Телефон:: <span class="required-star">*</span></label>                          <div class="input">
+                              <input type="number" id="phone" name="phone" class="form-control required" value="">                           </div>
+                                                   </div>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="form-group">
+                        <div class="col-md-12">
+                           <label for="email">E-mail:: <span class="required-star">*</span></label>                           <div class="input">
+                              <input type="text" id="email" name="email" class="form-control required " value="">                         </div>
+                                                   </div>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="form-group">
+                        <div class="col-md-12">
+                           <label for="FILE">Приложение:: </label>                           <div class="input">
+                              <div class="uploader" id="uniform-FILE"><input type="file" id="FILE" name="FILE" value="Выберите файл">
+                              <span class="filename">файл не найден</span>
+                              <span class="action">Выберите файл</span>
+                              </div>                         </div>
+                                                   </div>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                     <div class="form-group">
+                        <div class="col-md-12">
+                           <label for="TEXT">Текст сообщения:: <span class="required-star">*</span></label>                         <div class="input">
+                              <textarea id="TEXT" name="TEXT" class="form-control required"></textarea>                          </div>
+                                                   </div>
+                     </div>
+                  </div>
+
+                  <div class="row">
+                  <div class="col-md-12">
+                     <div class="form-group">
+                        <label for="captcha_word">Введите код:<span class="required-star">*</span></label>                    </div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="form-group margin-bottom-30">
+                        <input type="hidden" name="captcha_sid" class="captcha_sid" value="073f548b4ead76088c5392f01f127c4f">
+                        <img src="images/captcha.jpg" height="40" width="180" alt="">                    
+                        <span class="refresh"><span>Поменять картинку</span></span>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="form-group">
+                        <div class="input ">
+                           <input type="text" name="captcha_word" value="" class="form-control captcha required" autocomplete="off">                        </div>
+                     </div>
+                  </div>
+               </div>
+
+                            </div>
+
+                            <div class="form-footer clearfix">
+                              <div class="pull-left required-fileds">
+                                 <i class="star">*</i> - Обязательные поля          </div>
+                              <div class="pull-right">
+                                 <button class="btn btn-primary" type="submit">Отправить</button><br><input type="hidden" name="form_submit" value="Отправить">            </div>
+                           </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+<div class="form-mask"></div>
+
+<a class="open-modal">
+   Открыть
+</a>
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
             <script src="js/dropdown.js"></script>
             <script src="js/aside-menu.js"></script>
             <script src="js/cbpHorizontalMenu.min.js"></script>
+            <script type="text/javascript">
+               $(document).ready(function(){
 
+                 $(".open-modal").click(function() {
+                   var HeightDocument = $(document).height();
+                   var WidthDocument = $(document).width();
+                   var HeightScreen = $(window).height();
+
+                   $(".form-mask").css({"width":WidthDocument,"height":HeightDocument});
+                   $(".form-mask").show();
+
+                   var Top_modal_window = $(document).scrollTop() + HeightScreen/2-$(".jqmWindow").height()/2;
+                   $(".jqmWindow").css({"top":Top_modal_window+"px","display":"block"});
+
+                   
+                 });
+
+               
+                 $(".jqmClose.top-close").click(function () {
+                   $(".form-mask, .jqmWindow").hide();
+                   $("body").css({"overflow":"auto"});
+                 });
+
+               
+                 $(".form-mask").click(function () {
+                   $(".form-mask, .jqmWindow").hide();
+                 });
+               });
+               </script>
             <script>
                 $(document).ready(function(){
                     $(function() {
